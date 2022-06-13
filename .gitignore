@@ -1,25 +1,22 @@
-#Learn more about Jenkins and JENKINS_HOME directory for which this file is intended.
-#  http://jenkins-ci.org/
-#  https://wiki.jenkins-ci.org/display/JENKINS/Administering+Jenkins
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
 
-#ignore all JENKINS_HOME except jobs directory, root xml config, and .gitignore file
-/*
-!/jobs
-!/.gitignore
-!/*.xml
+# Test binary, built with `go test -c`
+*.test
 
-#ignore all files in jobs subdirectories except for folders
-#note: git doesn't track folders, only file content
-jobs/**
-!jobs/**/
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
 
-#uncomment the following line to save next build numbers with config
-#!jobs/**/nextBuildNumber
+# Dependency directories (remove the comment below to include it)
+# vendor/
 
-#exclude only config.xml files in repository subdirectories
-!config.xml
+# IDE files
+.idea 
 
-#don't track workspaces (when users build on the master)
-jobs/**/*workspace
-
-#as a result only settings and job config.xml files in JENKINS_HOME will be tracked by git
+# you could check these files in if you wanted to; but they are generally temporary files used
+# to generate the config-root directories
+build
