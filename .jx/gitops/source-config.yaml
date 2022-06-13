@@ -1,0 +1,16 @@
+apiVersion: gitops.jenkins-x.io/v1alpha1
+kind: SourceConfig
+metadata:
+  creationTimestamp: null
+spec:
+  groups:
+  - owner: CENIA-DEV
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: kubeflow-pipeline-ci-cd-example
+    scheduler: in-repo
+  slack:
+    channel: '#jenkins-x-pipelines'
+    kind: failureOrNextSuccess
+    pipeline: release
