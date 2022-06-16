@@ -10,6 +10,12 @@ spec:
     repositories:
     - name: kubeflow-pipeline-ci-cd-example
     scheduler: in-repo
+  - owner: FranLucchini
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: jenkinsx_golang_app
+    scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
     kind: failureOrNextSuccess
